@@ -1,0 +1,12 @@
+version: '3'
+services:
+    login_app:
+        build: ./darwin_app
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/code
+        depends_on:
+            - redis
+    redis:
+        image: redis
