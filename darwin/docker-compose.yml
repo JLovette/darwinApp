@@ -3,7 +3,7 @@ services:
     login_app:
         build: ./darwin_app
         ports:
-            - "5000:5000"
+            - "80:80"
         volumes:
             - .:/code
         depends_on:
